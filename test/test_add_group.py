@@ -10,6 +10,7 @@ def test_add_group(app):
     app.group.submit_new_group()
     app.group.back_to_group_page()
     app.goTo_home()
+    app.session.logout()
 
 
 def test_add_empty_group(app):

@@ -8,7 +8,7 @@ from fixture.session import SessionHelper
 class Application:
     def __init__(self):
         self.driver = webdriver.Chrome()
-        self.driver.implicitly_wait(5)
+        self.driver.implicitly_wait(1)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.contact = ContactHelper(self)
