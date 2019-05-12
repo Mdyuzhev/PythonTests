@@ -26,6 +26,12 @@ class GroupHelper:
         driver.find_element_by_name("group_footer").clear()
         driver.find_element_by_name("group_footer").send_keys(group.footer)
 
+    def delete_first_group(self):
+        driver = self.app.driver
+        driver.find_element_by_name("selected[]").click()
+        driver.find_element_by_xpath("(//input[@name='delete'])[2]").click()
+
+
     def add_new_group(self):
         driver = self.app.driver
         driver.find_element_by_name("new").click()
