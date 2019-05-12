@@ -4,6 +4,7 @@ class SessionHelper:
 
     def login(self, username, password):
         driver = self.app.driver
+        driver.get("http://localhost/addressbook/")
         driver.find_element_by_name("user").click()
         driver.find_element_by_name("user").clear()
         driver.find_element_by_name("user").send_keys(username)
